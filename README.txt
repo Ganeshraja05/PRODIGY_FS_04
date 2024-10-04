@@ -1,6 +1,6 @@
 
 Real-Time Chat Application
-Overview This is a real-time chat application that allows users to communicate with each other in real-time. The application is built using [list technologies used,,<|start_header_id|>ably, socket.io, etc.].
+Overview This is a real-time chat application that allows users to communicate with each other in real-time. The application is built using [list technologies used,HTML,CSS,JAVASCRIPT,NODE JS, socket.io, etc.].
 
 Features
 
