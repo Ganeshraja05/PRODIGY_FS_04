@@ -1,0 +1,364 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: -webkit-fill-available;
+    margin: 0;
+    overflow: hidden; /* Prevent scroll due to background elements */
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Initial gradient */
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite; /* Animated background */
+    position: relative;
+   
+}
+
+/* Keyframes for moving background gradient */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Background Decorations */
+/* Style the body */
+/* Style the body */
+body {
+    animation: changeBackgroundGradient 3s infinite;
+  }
+  
+  @keyframes changeBackgroundGradient {
+    0% {
+      background: linear-gradient(135deg, #f7dc6f, #ffd700);
+    }
+    25% {
+      background: linear-gradient(135deg, #ffff00, #ffff66);
+    }
+    50% {
+      background: linear-gradient(135deg, #ffd700, #ffcc00);
+    }
+    75% {
+      background: linear-gradient(135deg, #ffcc00, #ffff66);
+    }
+    100% {
+      background: linear-gradient(135deg, #f7dc6f, #ffd700);
+    }
+  }
+/* Chat Container */
+#chat-container {
+    width: 350px;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency for container */
+    padding: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+#chat-container:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* User Heading */
+#user-heading {
+    text-align: center;
+    color: #2a5298;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Message List Styling */
+#messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Individual Message Styling */
+#messages li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 12px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#messages li:hover {
+    background: #e6f7ff;
+    transform: translateY(-2px);
+}
+
+/* User Icons */
+.user-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user1-icon {
+    background-image: url('img1.png'); /* Replace with User 1 icon path */
+}
+
+.user2-icon {
+    background-image: url('img2.png'); /* Replace with User 2 icon path */
+}
+
+/* Message Content */
+.message-content {
+    flex: 1;
+    font-size: 15px;
+    color: #333;
+    word-wrap: break-word;
+}
+
+/* Form and Input Styling */
+#form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Input Field */
+#input {
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 12px 20px;
+    flex: 1;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 14px;
+}
+
+#input:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 5px rgba(42, 82, 152, 0.5);
+    outline: none;
+}
+
+/* Send Button */
+button {
+    border: none;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    font-weight: 500;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+    background: linear-gradient(45deg, #ff4b5c, #ff725e);
+}
+
+/* Typing Indicator Styling */
+.typing-indicator-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.typing-indicator {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+    margin-right: 5px;
+}
+
+.typing-indicator:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Chat Icon with Notification */
+.chat-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    animation: floatIcon 6s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.chat-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.chat-icon:hover img {
+    transform: scale(1.1);
+}
+
+/* Notification Badge */
+.notification-badge {
+    background-color: #ff4b5c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 12px;
+    box-shadow: 0px 4px 10px rgba(255, 75, 92, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+/* Style the futuristic container */
+.futuristic-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style the futuristic text */
+  #futuristic-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Add some futuristic styling to the text */
+  #futuristic-text {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: futuristic-text-glow 2s infinite;
+  }
+  
+  @keyframes futuristic-text-glow {
+    0% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+  }
+  /* // best seen at 1500px or less */
+/*   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; */
+
+html, body { height:-webkit-fill-available; }
+body {
+  background: radial-gradient(rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+}
+
+.ocean {
+  height: 3%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015871;
+z-index: -1;
+
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+  position: absolute;
+  width: 6400px;
+  top: -198px;
+  left: 0;
+  height: 198px;
+  transform: translate(0, 0, 0);
+  animation: wave 7s ease infinite;
+}
+
+.wave:nth-of-type(2) {
+  top: -168px;
+  animation: swell 4s ease infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% { margin-left: 0; }
+  100% { margin-left: -1600px;}
+}
+@keyframes swell {
+  0%, 100% {
+    transform: translate(0, -30px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+}
